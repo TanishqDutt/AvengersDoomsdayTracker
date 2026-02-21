@@ -9,6 +9,7 @@ on:
 jobs:
   UploadData:
     runs-on: ubuntu-latest
+    environment: env
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
