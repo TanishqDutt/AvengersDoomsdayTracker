@@ -1,7 +1,7 @@
 const { createClient } = require('@supabase/supabase-js')
-const dotenv = require('dotenv')
+//const dotenv = require('dotenv')
 
-dotenv.config();
+//dotenv.config();
 
 
 // Create a single supabase client for interacting with your database
