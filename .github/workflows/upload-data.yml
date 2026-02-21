@@ -4,6 +4,7 @@ run-name: Current Statistics of Live are being Uploaded
 on: 
   schedule:
     - cron: '*/10 * * * *'
+  workflow_dispatch:
 
 jobs:
   UploadData:
