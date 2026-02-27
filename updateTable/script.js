@@ -64,6 +64,7 @@ async function insertData() {
     
     let data = await getStreamData(videoID)
     
+
     const maxtime = await supabase
     .from('day_table')
     .select('*')
@@ -104,8 +105,14 @@ async function getStreamData(videoID) {
                '&id='+videoID+
                '&key='+API_KEY
 
-    let response = await fetch(url)
-    let finalResponse = await response.json()
+    let finalResponse
+    try{
+        let response = await fetch(url)
+        finalResponse = await response.json()
+    }
+    catch(error){
+        throw Error(error)
+    }
 
     let data = {
         views: finalResponse.items[0].liveStreamingDetails.concurrentViewers,
