@@ -60,7 +60,7 @@ function SumAverageCount(listOfData){
 async function insertData() {
     let currentTime = now()
     let timeString = currentTime.getHours().toString() + ':' + currentTime.getMinutes().toString()
-    let dateString = currentTime.getFullYear().toString()+'-'+currentTime.getMonth().toString()+'-'+currentTime.getDate().toString()
+    let dateString = currentTime.getFullYear().toString()+'-'+(currentTime.getMonth()+1).toString()+'-'+currentTime.getDate().toString()
     
     let data = await getStreamData(videoID)
     
